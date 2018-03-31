@@ -1,0 +1,156 @@
+<!doctype html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8">
+<title>Clock :: The New Year Clock by Ben Hovinga</title>
+<meta name="keywords" content="new, year, years, clock, timer, count, down, ben, hovinga, big, screen, dark, full, fullscreen" />
+<meta name="description" content="The New Year Clock by Ben Hovinga is your way to countdown to the new year. Use it anywhere that supports JavaScript." />
+<meta property="og:title" content="The New Year Clock" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://newyear.hovinga.ca/" />
+<meta property="og:image" content="http://newyear.hovinga.ca/logo.jpg" />
+<meta property="og:site_name" content="The New Year Clock" />
+<meta property="fb:admins" content="674945426" />
+
+<script>
+function newyear() {
+	date = new Date();
+	return(date.getFullYear() + 1);	
+}
+</script>
+
+<script>
+function getTime() {
+	now = new Date();
+	
+	//ENTER BELOW THE DATE YOU WISH TO COUNTDOWN TO
+	later = new Date("Jan 1 " + newyear() + " 0:00:00");
+	
+	days = (later - now) / 1000 / 60 / 60 / 24;
+	daysRound = Math.floor(days);
+	hours = (later - now) / 1000 / 60 / 60 - (24 * daysRound);
+	hoursRound = Math.floor(hours);
+	minutes = (later - now) / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
+	minutesRound = Math.floor(minutes);
+	seconds = (later - now) / 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
+	secondsRound = Math.round(seconds);
+	
+	if (secondsRound <= 9) {
+		document.getElementById('s').innerHTML = "0"+secondsRound;
+	}
+	else {
+		document.getElementById('s').innerHTML = secondsRound;
+	}
+	if (minutesRound <= 9) {
+		document.getElementById('m').innerHTML = "0"+minutesRound;
+	}
+	else {
+		document.getElementById('m').innerHTML = minutesRound;
+	}
+	if (hoursRound <= 9) {
+		document.getElementById('h').innerHTML = "0"+hoursRound;
+	}
+	else {
+		document.getElementById('h').innerHTML = hoursRound;
+	}
+	if (daysRound <= 999){
+		document.getElementById('d').innerHTML = daysRound;
+	}
+	
+	if (daysRound <= 99) {
+		document.getElementById('d').innerHTML = "0"+daysRound;
+	}
+	if (daysRound <= 9) {
+		document.getElementById('d').innerHTML = "00"+daysRound;
+	}
+	
+	newtime = window.setTimeout("getTime();", 1000);
+}
+</script>
+
+<script>
+var min=1;
+var max=3000;
+function increaseFontSize() {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 5;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+}
+function decreaseFontSize() {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 5;
+      }
+      p[i].style.fontSize = s+"px"
+   }   
+}
+function FontSize(thesize) {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      s = thesize;
+      p[i].style.fontSize = s+"px"
+   }   
+}
+</script>
+
+<style>
+body {background-color:#000; color:#FFF;}
+a:link {color: #555; text-decoration: none; }
+a:active {color: #ff0000; text-decoration: none; }
+a:visited {color: #555; text-decoration: none; }
+a:hover {color: #ff0000; text-decoration: none; }
+</style>
+
+</head>
+
+<body onLoad="getTime()">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=251246078258649";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div style="float:right; width:200px; text-align:right;"><a href="index.html">[HOME]</a> <a href="clock.html">[CLOCK]</a> <a href="faq.html">[FAQ]</a></div>
+<div><span style="color:#555;">Font Size:</span>
+<a href="javascript:decreaseFontSize();">[-5]</a>
+<a href="javascript:increaseFontSize();">[+5]</a>
+<a href="javascript:FontSize('50');">[50]</a>
+<a href="javascript:FontSize('75');">[75]</a>
+<a href="javascript:FontSize('100');">[100]</a>
+<a href="javascript:FontSize('125');">[125]</a>
+<a href="javascript:FontSize('150');">[150]</a>
+<a href="javascript:FontSize('175');">[175]</a>
+<a href="javascript:FontSize('200');">[200]</a>
+<a href="javascript:FontSize('225');">[225]</a>
+<a href="javascript:FontSize('250');">[250]</a>
+</div>
+
+<h1 align="center">New Year (<script>document.write(newyear());</script>)</h1>
+<p align="center" style="font-size:50px; font-family:'Courier New', Courier, monospace"><span id="d"></span>:<span id="h"></span>:<span id="m"></span>:<span id="s"></span></p>
+<h4 align="center" style="color:#555">(Days : Hours : Minutes : Seconds)</h4>
+<div align="center"><fb:like href="http://newyear.hovinga.ca" send="true" layout="button_count" width="200" show_faces="true" font="arial" colorscheme="dark"></fb:like></div>
+</body>
+</html>
