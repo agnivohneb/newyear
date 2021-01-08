@@ -73,11 +73,11 @@ a:focus {
 }
 
 .content-home {
-    padding: 170px 100px 60px 100px;
-    height: 295px;
-    background-image: url("../images/newyearback.png");
-    background-repeat: no-repeat;
-  }
+  padding: 170px 100px 60px 100px;
+  height: 295px;
+  background-image: url("../images/newyearback.png");
+  background-repeat: no-repeat;
+}
 
 .footer {
   padding: 10px 0;
