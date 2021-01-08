@@ -75,7 +75,7 @@ a:focus {
 .content-home {
     padding: 170px 100px 60px 100px;
     height: 295px;
-    background-image: url(newyearback.png);
+    background-image: url("../images/newyearback.png");
     background-repeat: no-repeat;
   }
 
@@ -121,30 +121,30 @@ a:focus {
 #bigbutton a {
   height: 120px;
   display: block;
-  background: url("big-button.png") 0 0;
+  background: url("../images/big-button.png") 0 0;
 }
 #bigbutton a:link {
-  background: url("big-button.png") 0 0;
+  background: url("../images/big-button.png") 0 0;
 }
 #bigbutton a:hover {
-  background: url("big-button.png") 0 -120px;
+  background: url("../images/big-button.png") 0 -120px;
 }
 #bigbutton a:active {
-  background: url("big-button.png") 0 -240px;
+  background: url("../images/big-button.png") 0 -240px;
 }
 
 .sectiontop {
-  background-image: url(top.png);
+  background-image: url("../images/top.png");
   background-repeat: no-repeat;
   height: 267px;
 }
 .sectionmid {
-  background-image: url(mid.png);
+  background-image: url("../images/mid.png");
   background-repeat: repeat-y;
   min-height: 4px;
 }
 .sectionbot {
-  background-image: url(bottom.png);
+  background-image: url("../images/bottom.png");
   background-repeat: no-repeat;
   background-position: bottom;
   min-height: 254px;
