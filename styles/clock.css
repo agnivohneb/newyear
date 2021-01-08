@@ -1,0 +1,41 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+a:link {
+  color: #555;
+  text-decoration: none;
+}
+a:active {
+  color: #ff0000;
+  text-decoration: none;
+}
+a:visited {
+  color: #555;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff0000;
+  text-decoration: none;
+}
+h1,
+h4,
+p {
+  text-align: center;
+}
+h4 {
+  color: #555;
+}
+
+.menu {
+  float: right;
+  width: 200px;
+  text-align: right;
+}
+.sizepick {
+  color: #555;
+}
+.clock {
+  font-size: 50px;
+  font-family: "Courier New", Courier, monospace;
+}
