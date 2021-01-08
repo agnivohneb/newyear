@@ -1,173 +1,178 @@
-<!doctype html>
-<html xmlns:fb="http://ogp.me/ns/fb#">
-<head>
-<meta charset="utf-8">
-<title>The New Year Clock by Ben Hovinga</title>
-<meta name="keywords" content="new, year, years, clock, timer, count, down, ben, hovinga, big, screen, dark, full, fullscreen" />
-<meta name="description" content="The New Year Clock by Ben Hovinga is your way to countdown to the new year. Use it anywhere that supports JavaScript." />
-<meta property="og:title" content="The New Year Clock" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://newyear.hovinga.ca/" />
-<meta property="og:image" content="http://newyear.hovinga.ca/logo.jpg" />
-<meta property="og:site_name" content="The New Year Clock" />
-<meta property="fb:admins" content="674945426" />
-<style type="text/css">
-<!--
-body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color:#FFFFFF;
-	margin: 0;
-	padding: 0;
-	color: #000;
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The New Year Clock by Ben Hovinga</title>
+    <meta
+      name="keywords"
+      content="new, year, years, clock, timer, count, down, ben, hovinga, big, screen, dark, full, fullscreen"
+    />
+    <meta
+      name="description"
+      content="The New Year Clock by Ben Hovinga is your way to countdown to the new year. Use it anywhere that supports JavaScript."
+    />
+    <style type="text/css">
+      body {
+      	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+      	background-color:#FFFFFF;
+      	margin: 0;
+      	padding: 0;
+      	color: #000;
+      }
 
-ul, ol, dl {
-	padding: 0;
-	margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-	margin-top: 0;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-a img {
-	border: none;
-}
+      ul, ol, dl {
+      	padding: 0;
+      	margin: 0;
+      }
+      h1, h2, h3, h4, h5, h6, p {
+      	margin-top: 0;
+      	padding-right: 15px;
+      	padding-left: 15px;
+      }
+      a img {
+      	border: none;
+      }
 
-a:link {
-	color: #FFCC00;
-	text-decoration: underline;
-}
-a:visited {
-	color: #FFCC00;
-	text-decoration: underline;
-}
-a:hover, a:active, a:focus {
-	color:#0099FF;
-	text-decoration: underline;
-}
+      a:link {
+      	color: #FFCC00;
+      	text-decoration: underline;
+      }
+      a:visited {
+      	color: #FFCC00;
+      	text-decoration: underline;
+      }
+      a:hover, a:active, a:focus {
+      	color:#0099FF;
+      	text-decoration: underline;
+      }
 
-.container {
-	width: 979px;
-	margin: 0 auto;
-}
+      .container {
+      	width: 979px;
+      	margin: 0 auto;
+      }
 
-.header {
-	min-height:40px;
-	color:#F00;
-	text-align:center;
-	margin-top:10px;
-	font-family:"Courier New", Courier, monospace;
-	font-size:18px;
-	font-weight:bold;
-}
+      .header {
+      	min-height:40px;
+      	color:#F00;
+      	text-align:center;
+      	margin-top:10px;
+      	font-family:"Courier New", Courier, monospace;
+      	font-size:18px;
+      	font-weight:bold;
+      }
 
-.header a, .header a:link, .header a:visited{
-	color:#F00;
-}
-.header a:hover, .header a:active{
-	color:#0099FF;
-}
+      .header a, .header a:link, .header a:visited{
+      	color:#F00;
+      }
+      .header a:hover, .header a:active{
+      	color:#0099FF;
+      }
 
-.content {
-	padding: 170px 100px 60px 100px;
-	height:295px;
-	background-image:url(newyearback.png);
-	background-repeat:no-repeat;
-	color:#FF6600;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:18px;
-}
+      .content {
+      	padding: 170px 100px 60px 100px;
+      	height:295px;
+      	background-image:url(newyearback.png);
+      	background-repeat:no-repeat;
+      	color:#FF6600;
+      	font-family:Georgia, "Times New Roman", Times, serif;
+      	font-size:18px;
+      }
 
-.footer {
-	padding: 10px 0;
-	color:#191919;
-	font-size:9px;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	text-align:right;
-}
-.footer a, .footer a:link, .footer a:visited{
-	color:#666;
-}
-.footer a:hover, .footer a:active{
-	color:#630;
-}
+      .footer {
+      	padding: 10px 0;
+      	color:#191919;
+      	font-size:9px;
+      	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      	text-align:right;
+      }
+      .footer a, .footer a:link, .footer a:visited{
+      	color:#666;
+      }
+      .footer a:hover, .footer a:active{
+      	color:#630;
+      }
 
-.fltrt {
-	float: right;
-	margin-left: 8px;
-}
-.fltlft {
-	float: left;
-	margin-right: 8px;
-}
-.clearfloat {
-	clear:both;
-	height:0;
-	font-size: 1px;
-	line-height: 0px;
-}
+      .fltrt {
+      	float: right;
+      	margin-left: 8px;
+      }
+      .fltlft {
+      	float: left;
+      	margin-right: 8px;
+      }
+      .clearfloat {
+      	clear:both;
+      	height:0;
+      	font-size: 1px;
+      	line-height: 0px;
+      }
 
-#bigbutton {
-	left:0px;width:438px;position:relative;margin:0;padding:0;
-}
-#bigbutton a {
-	height:120px;display:block;background:url('big-button.png') 0 0;
-}
-#bigbutton a:link {
-	background:url('big-button.png') 0 0;
-}
-#bigbutton a:hover {
-	background: url('big-button.png') 0 -120px;
-}
-#bigbutton a:active {
-	background: url('big-button.png') 0 -240px;
-}
--->
-</style>
-<script>
-function year() {
-	date = new Date();
-	return(date.getFullYear());	
-}
-</script>
+      #bigbutton {
+      	left:0px;width:438px;position:relative;margin:0;padding:0;
+      }
+      #bigbutton a {
+      	height:120px;display:block;background:url('big-button.png') 0 0;
+      }
+      #bigbutton a:link {
+      	background:url('big-button.png') 0 0;
+      }
+      #bigbutton a:hover {
+      	background: url('big-button.png') 0 -120px;
+      }
+      #bigbutton a:active {
+      	background: url('big-button.png') 0 -240px;
+      }
+    </style>
+    <script>
+      function year() {
+        date = new Date();
+        return date.getFullYear();
+      }
+    </script>
+  </head>
 
-</head>
-
-<body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=251246078258649";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="container">
-    <div class="header"><a href="index.html">Home</a> :: <a href="clock.html">Clock</a> :: <a href="faq.html">FAQ</a></div>
-    <div class="content">
-   		<div class="fltrt" style="width:250px;">
-			<script type="text/javascript"><!--
-				google_ad_client = "ca-pub-4422184228968291";
-				/* newyears_home */
-				google_ad_slot = "9303834415";
-				google_ad_width = 250;
-				google_ad_height = 250;
-				//-->
-            </script>
-            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-        </div>
-    	<div>
-            <p><span style="text-decoration: underline; font-weight:bold;">The New Year Clock</span> by <a href="http://ben.hovinga.ca/" title="Ben Hovinga's Personal Website">Ben Hovinga</a> is your way to countdown to the new year. Use it anywhere that supports JavaScript. If you want to learn more about this check out the <a href="faq.html" title="Frequently Asked Questions">FAQ</a>.</p>
-            <div style="padding-top:10px;">
-                <div id="bigbutton"><a href="clock.html" title="Show me the Clock!"></a></div>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="index.html">Home</a> :: <a href="clock.html">Clock</a> ::
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="content">
+        <div>
+          <p>
+            <span style="text-decoration: underline; font-weight: bold"
+              >The New Year Clock</span
+            >
+            by
+            <a
+              href="http://ben.hovinga.ca/"
+              title="Ben Hovinga's Personal Website"
+              >Ben Hovinga</a
+            >
+            is your way to countdown to the new year. Use it anywhere that
+            supports JavaScript. If you want to learn more about this check out
+            the <a href="faq.html" title="Frequently Asked Questions">FAQ</a>.
+          </p>
+          <div style="padding-top: 10px">
+            <div id="bigbutton">
+              <a href="clock.html" title="Show me the Clock!"></a>
             </div>
+          </div>
         </div>
         <div class="clearfloat"></div>
-        <div style="padding:5px 0px 5px 20px;"><fb:like href="http://newyear.hovinga.ca/" send="true" layout="button_count" width="200" show_faces="true" font="arial"></fb:like></div>
+      </div>
+      <div class="footer">
+        &copy; Copyright
+        <a href="http://ben.hovinga.ca/" title="Ben Hovinga's Personal Website"
+          >Ben Hovinga</a
+        >
+        <script>
+          document.write(year());
+        </script>
+        :: <a href="index.html" title="Go Home">Home</a> -
+        <a href="clock.html" title="Show the countdown clock">Clock</a> -
+        <a href="faq.html" title="Frequently Asked Questions">FAQ</a> ::
+      </div>
     </div>
-    <div class="footer">&copy; Copyright <a href="http://ben.hovinga.ca/" title="Ben Hovinga's Personal Website">Ben Hovinga</a> <script>document.write(year());</script> :: <a href="index.html" title="Go Home">Home</a> - <a href="clock.html" title="Show the countdown clock">Clock</a> - <a href="faq.html" title="Frequently Asked Questions">FAQ</a> ::</div>
-</div>
-</body>
+  </body>
 </html>
