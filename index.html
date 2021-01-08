@@ -11,124 +11,8 @@
       name="description"
       content="The New Year Clock by Ben Hovinga is your way to countdown to the new year. Use it anywhere that supports JavaScript."
     />
-    <style type="text/css">
-      body {
-      	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-      	background-color:#FFFFFF;
-      	margin: 0;
-      	padding: 0;
-      	color: #000;
-      }
-
-      ul, ol, dl {
-      	padding: 0;
-      	margin: 0;
-      }
-      h1, h2, h3, h4, h5, h6, p {
-      	margin-top: 0;
-      	padding-right: 15px;
-      	padding-left: 15px;
-      }
-      a img {
-      	border: none;
-      }
-
-      a:link {
-      	color: #FFCC00;
-      	text-decoration: underline;
-      }
-      a:visited {
-      	color: #FFCC00;
-      	text-decoration: underline;
-      }
-      a:hover, a:active, a:focus {
-      	color:#0099FF;
-      	text-decoration: underline;
-      }
-
-      .container {
-      	width: 979px;
-      	margin: 0 auto;
-      }
-
-      .header {
-      	min-height:40px;
-      	color:#F00;
-      	text-align:center;
-      	margin-top:10px;
-      	font-family:"Courier New", Courier, monospace;
-      	font-size:18px;
-      	font-weight:bold;
-      }
-
-      .header a, .header a:link, .header a:visited{
-      	color:#F00;
-      }
-      .header a:hover, .header a:active{
-      	color:#0099FF;
-      }
-
-      .content {
-      	padding: 170px 100px 60px 100px;
-      	height:295px;
-      	background-image:url(newyearback.png);
-      	background-repeat:no-repeat;
-      	color:#FF6600;
-      	font-family:Georgia, "Times New Roman", Times, serif;
-      	font-size:18px;
-      }
-
-      .footer {
-      	padding: 10px 0;
-      	color:#191919;
-      	font-size:9px;
-      	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-      	text-align:right;
-      }
-      .footer a, .footer a:link, .footer a:visited{
-      	color:#666;
-      }
-      .footer a:hover, .footer a:active{
-      	color:#630;
-      }
-
-      .fltrt {
-      	float: right;
-      	margin-left: 8px;
-      }
-      .fltlft {
-      	float: left;
-      	margin-right: 8px;
-      }
-      .clearfloat {
-      	clear:both;
-      	height:0;
-      	font-size: 1px;
-      	line-height: 0px;
-      }
-
-      #bigbutton {
-      	left:0px;width:438px;position:relative;margin:0;padding:0;
-      }
-      #bigbutton a {
-      	height:120px;display:block;background:url('big-button.png') 0 0;
-      }
-      #bigbutton a:link {
-      	background:url('big-button.png') 0 0;
-      }
-      #bigbutton a:hover {
-      	background: url('big-button.png') 0 -120px;
-      }
-      #bigbutton a:active {
-      	background: url('big-button.png') 0 -240px;
-      }
-    </style>
-    <script>
-      function year() {
-        date = new Date();
-        return date.getFullYear();
-      }
-    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="function.year.js"></script>
   </head>
 
   <body>
@@ -137,7 +21,7 @@
         <a href="index.html">Home</a> :: <a href="clock.html">Clock</a> ::
         <a href="faq.html">FAQ</a>
       </div>
-      <div class="content">
+      <div class="content content-home">
         <div>
           <p>
             <span style="text-decoration: underline; font-weight: bold"
