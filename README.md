@@ -1,5 +1,7 @@
 # The New Year Clock
 
+![Logo](images/logo.png)
+
 This is a countdown project I made about 10 years ago. I uploaded it to GitHub 3 years ago to archive the old project ([see version 1.0](https://github.com/benhovinga/newyear/tree/1.0)). Just recently I started to do Web Development again and thought I would look over this project and update it to more modern standards while still keeping it simple.
 
 You can preview it at: https://benhovinga.github.io/newyear/
