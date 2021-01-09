@@ -27,4 +27,10 @@ class FontSize {
   }
 }
 
+function newYear() {
+  return new Date().getFullYear() + 1;
+}
+
 const fs = new FontSize(document.getElementById("clock"));
+
+document.getElementById("next-year").innerHTML = newYear();

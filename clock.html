@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="styles/clock.css" />
 
-    <script src="javascript/function.year.js"></script>
     <script src="javascript/function.getTime.js"></script>
   </head>
 
@@ -38,13 +37,7 @@
       <a href="javascript:fs.set(250);">[250]</a>
     </div>
 
-    <h1>
-      New Year (
-      <script>
-        document.write(newyear());
-      </script>
-      )
-    </h1>
+    <h1>New Year (<span id="next-year"></span>)</h1>
     <p id="clock">
       <span id="d"></span>:<span id="h"></span>:<span id="m"></span>:<span
         id="s"

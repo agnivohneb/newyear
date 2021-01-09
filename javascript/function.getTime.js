@@ -2,7 +2,7 @@ function getTime() {
   now = new Date();
 
   //ENTER BELOW THE DATE YOU WISH TO COUNTDOWN TO
-  later = new Date("Jan 1 " + newyear() + " 0:00:00");
+  later = new Date("Jan 1 " + newYear() + " 0:00:00");
 
   days = (later - now) / 1000 / 60 / 60 / 24;
   daysRound = Math.floor(days);
