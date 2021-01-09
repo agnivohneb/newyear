@@ -11,13 +11,10 @@
       name="description"
       content="The New Year Clock by Ben Hovinga is your way to countdown to the new year. Use it anywhere that supports JavaScript."
     />
-
     <link rel="stylesheet" href="styles/clock.css" />
-
-    <script src="javascript/function.getTime.js"></script>
   </head>
 
-  <body onLoad="getTime()">
+  <body">
     <div class="menu">
       <a href="index.html">[HOME]</a> <a href="clock.html">[CLOCK]</a>
       <a href="faq.html">[FAQ]</a>
@@ -38,11 +35,7 @@
     </div>
 
     <h1>New Year (<span id="next-year"></span>)</h1>
-    <p id="clock">
-      <span id="d"></span>:<span id="h"></span>:<span id="m"></span>:<span
-        id="s"
-      ></span>
-    </p>
+    <p id="clock">Loading...</p>
     <h4>(Days : Hours : Minutes : Seconds)</h4>
   </body>
   <script src="./javascript/app.js"></script>

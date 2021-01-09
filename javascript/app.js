@@ -27,10 +27,45 @@ class FontSize {
   }
 }
 
+function forceZero(number, doubleZero) {
+  // Forces number to be displayed with leading zero
+  if (doubleZero)
+    return number < 100
+      ? number < 10
+        ? "00" + number.toString()
+        : "0" + number.toString()
+      : number.toString();
+  return number < 10 ? "0" + number.toString() : number.toString();
+}
+
+function countdownTime(timeTo) {
+  let diff = new Date(timeTo - new Date());
+  let days = Math.floor(diff / 1000 / 60 / 60 / 24);
+  let hours = Math.floor(diff / 1000 / 60 / 60 - 24 * days);
+  let minutes = Math.floor(diff / 1000 / 60 - 24 * 60 * days - 60 * hours);
+  let seconds = Math.floor(
+    diff / 1000 - 24 * 60 * 60 * days - 60 * 60 * hours - 60 * minutes
+  );
+
+  return `${forceZero(days, true)}:${forceZero(hours)}:${forceZero(
+    minutes
+  )}:${forceZero(seconds)}`;
+}
+
 function newYear() {
   return new Date().getFullYear() + 1;
 }
 
+// Main program starts here \\
+
+// Construct fs
 const fs = new FontSize(document.getElementById("clock"));
 
+// Display new year in header
 document.getElementById("next-year").innerHTML = newYear();
+
+// Run countdown
+const newDate = new Date(newYear(), 0);
+const x = setInterval(function () {
+  document.getElementById("clock").innerHTML = countdownTime(newDate);
+}, 1000);
